@@ -72,9 +72,10 @@ info: VehicleTelemetry.Workers.CloudSend[0]
 
 4. **Run Unit Tests for Telemetry data**
 On Visual Studio menu click Test->Run All tests
-```
+
 **Folder structure**
 
+```
     VehicleTelemetry.Api/
     ├── Controllers/                      # API endpoints 
     ├── Data/                             # DbContext and SQLite database
