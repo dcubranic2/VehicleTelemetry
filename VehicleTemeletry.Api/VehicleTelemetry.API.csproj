@@ -25,4 +25,11 @@
     <Folder Include="Migrations\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Remove="VehicleTelemetry.Tests\**" />
+    <Content Remove="VehicleTelemetry.Tests\**" />
+    <EmbeddedResource Remove="VehicleTelemetry.Tests\**" />
+    <None Remove="VehicleTelemetry.Tests\**" />
+  </ItemGroup>
+
 </Project>
