@@ -39,8 +39,8 @@ public class TelemetryServiceTests
                 Timestamp = timestamp,
                 EngineRpm = 3000,
                 FuelLevelPercentage = 75.5m,
-                Latitude = 45.815,
-                Longitude = 15.982
+                Latitude = 45.815m,
+                Longitude = 15.982m
             },
             new TelemetryRecord
             {
@@ -48,8 +48,8 @@ public class TelemetryServiceTests
                 Timestamp = timestamp.AddMinutes(-5),
                 EngineRpm = 1500,
                 FuelLevelPercentage = 50.0m,
-                Latitude = 46.0,
-                Longitude = 16.0
+                Latitude = 46.0m,
+                Longitude = 16.0m
             }
         };
 
@@ -106,8 +106,8 @@ public class TelemetryServiceTests
                 Timestamp = timestamp,
                 EngineRpm = 4000,
                 FuelLevelPercentage = 60.0m,
-                Latitude = 45.0,
-                Longitude = 15.0
+                Latitude = 45.0m,
+                Longitude = 15.0m
             }
         };
 
@@ -182,8 +182,8 @@ public class TelemetryServiceTests
             Timestamp = timestamp,
             EngineRpm = 2500,
             FuelLevelPercentage = 80.0m,
-            Latitude = 45.5,
-            Longitude = 15.5
+            Latitude = 45.5m,
+            Longitude = 15.5m
         };
 
         _repositoryMock
@@ -233,8 +233,8 @@ public class TelemetryServiceTests
             DeviceId = Guid.NewGuid(),
             EngineRpm = 3500,
             FuelLevelPercentage = 65.0m,
-            Latitude = 44.0,
-            Longitude = 14.0
+            Latitude = 44.0m,
+            Longitude = 14.0m
         };
 
         _repositoryMock
@@ -263,8 +263,8 @@ public class TelemetryServiceTests
             DeviceId = Guid.NewGuid(),
             EngineRpm = 1000,
             FuelLevelPercentage = 100.0m,
-            Latitude = 0.0,
-            Longitude = 0.0
+            Latitude = 0.0m,
+            Longitude = 0.0m
         };
 
         _repositoryMock

@@ -17,11 +17,11 @@ namespace VehicleTelemetry.DTOS
 
         [Required]
         [Range(-90, 90)]
-        public double Latitude { get; set; }
+        public decimal Latitude { get; set; }
 
         [Required]
         [Range(-180, 180)]
-        public double Longitude { get; set; }
+        public decimal Longitude { get; set; }
         
     }
 }
