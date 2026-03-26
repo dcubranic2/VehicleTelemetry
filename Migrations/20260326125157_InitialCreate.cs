@@ -15,12 +15,13 @@ namespace VehicleTelemetry.Migrations
                 name: "telemetry_record",
                 columns: table => new
                 {
-                    device_id = table.Column<Guid>(type: "uuid", nullable: false),
-                    timestamp = table.Column<DateTimeOffset>(type: "timestamp with time zone", nullable: false),
-                    engine_rpm = table.Column<int>(type: "integer", nullable: false),
-                    fuel_level_percentage = table.Column<decimal>(type: "numeric(3,0)", nullable: false),
-                    latitude = table.Column<double>(type: "double precision", nullable: false),
-                    longitude = table.Column<double>(type: "double precision", nullable: false)
+                    device_id = table.Column<Guid>(type: "TEXT", nullable: false),
+                    timestamp = table.Column<DateTimeOffset>(type: "TEXT", nullable: false),
+                    engine_rpm = table.Column<int>(type: "INTEGER", nullable: false),
+                    fuel_level_percentage = table.Column<decimal>(type: "NUMERIC", nullable: false),
+                    latitude = table.Column<double>(type: "REAL", nullable: false),
+                    longitude = table.Column<double>(type: "REAL", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {

@@ -29,7 +29,7 @@ namespace VehicleTelemetry.Services
             }).ToList());
         }
 
-        async Task<IEnumerable<TelemetryDTO>> ITelemetryService.GetData(Guid deviceId, DateTimeOffset fromDate, DateTimeOffset toDate)
+        async Task<IEnumerable<TelemetryDTO>> ITelemetryService.GetData(Guid deviceId, DateTime fromDate, DateTime toDate)
         {
             // Fetch telemetry data from the repository based on the provided device ID and date range.
             var telemetryData = await _repository.GetData(deviceId, fromDate, toDate);

@@ -20,27 +20,30 @@ namespace VehicleTelemetry.Migrations
             modelBuilder.Entity("VehicleTelemetry.Model.TelemetryRecord", b =>
                 {
                     b.Property<Guid>("DeviceId")
-                        .HasColumnType("uuid")
+                        .HasColumnType("TEXT")
                         .HasColumnName("device_id");
 
                     b.Property<DateTimeOffset>("Timestamp")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("TEXT")
                         .HasColumnName("timestamp");
 
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("TEXT");
+
                     b.Property<int>("EngineRpm")
-                        .HasColumnType("integer")
+                        .HasColumnType("INTEGER")
                         .HasColumnName("engine_rpm");
 
                     b.Property<decimal>("FuelLevelPercentage")
-                        .HasColumnType("numeric(3,0)")
+                        .HasColumnType("NUMERIC")
                         .HasColumnName("fuel_level_percentage");
 
                     b.Property<double>("Latitude")
-                        .HasColumnType("double precision")
+                        .HasColumnType("REAL")
                         .HasColumnName("latitude");
 
                     b.Property<double>("Longitude")
-                        .HasColumnType("double precision")
+                        .HasColumnType("REAL")
                         .HasColumnName("longitude");
 
                     b.HasKey("DeviceId", "Timestamp");

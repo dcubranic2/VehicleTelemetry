@@ -47,6 +47,9 @@ namespace VehicleTelemetry.Data.Persistance
                     .HasColumnName("longitude")
                     .HasColumnType("REAL")
                     .IsRequired();
+                entity.Property(e => e.CreatedAt)
+                    .IsRequired()
+                    .HasColumnType("TEXT");
             });
             OnModelCreatingPartial(modelBuilder);
         }

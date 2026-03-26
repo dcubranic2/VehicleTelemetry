@@ -20,18 +20,16 @@ namespace VehicleTelemetry.Repositories
         {
             return await _context.TelemetryRecords.ToListAsync();
         }
-        public async Task<IEnumerable<TelemetryRecord>> GetData(Guid deviceId,DateTimeOffset fromDate,DateTimeOffset toDate)
+        public async Task<IEnumerable<TelemetryRecord>> GetData(Guid deviceId,DateTime fromDate,DateTime toDate)
         {
-            return await _context.TelemetryRecords.Where(r => r.DeviceId == deviceId && r.Timestamp >= fromDate && r.Timestamp <= toDate).ToListAsync();
+            return await _context.TelemetryRecords.Where(r => r.DeviceId == deviceId && r.CreatedAt >= fromDate && r.CreatedAt <= toDate).ToListAsync();
         }
 
         public async Task<TelemetryRecord?> GetLatestData(Guid deviceId)
         {
-            var data= await _context.TelemetryRecords.Where(r => r.DeviceId == deviceId).ToListAsync();
-            if (data == null || data.Count == 0)
-                    return null;
-            //Sqlite does not support OrderByDescending with DateTimeOffset, so we need to order in memory
-            return await Task.FromResult(data.OrderByDescending(r => r.Timestamp).FirstOrDefault());
+            //Sqlite does not support OrderByDescending with DateTimeOffset data type, so we need to order by CreatedAd which is DateTime data type
+            var data = await _context.TelemetryRecords.Where(r => r.DeviceId == deviceId).OrderByDescending(r => r.CreatedAt).FirstOrDefaultAsync();
+            return data;
         }
 
         public async Task InsertData(TelemetryRecord telemetryRecord)

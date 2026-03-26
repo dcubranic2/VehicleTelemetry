@@ -6,7 +6,7 @@ namespace VehicleTelemetry.Interfaces
     {
         Task<IEnumerable<TelemetryRecord>> GetAllData();
 
-        Task<IEnumerable<TelemetryRecord>> GetData(Guid deviceId, DateTimeOffset fromDate, DateTimeOffset toDate);
+        Task<IEnumerable<TelemetryRecord>> GetData(Guid deviceId, DateTime fromDate, DateTime toDate);
         Task<TelemetryRecord?> GetLatestData(Guid deviceId);
         Task InsertData(TelemetryRecord telemetryRecord);
     }
