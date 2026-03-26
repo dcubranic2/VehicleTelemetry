@@ -55,7 +55,9 @@ Response body:
 }
 ```
 3.  **Background service**
+   
 Web server console will print every second last 5 telemetry data.
+
 ```bash
 info: VehicleTelemetry.Workers.CloudSend[0]
       Sending data to cloud for Device 3fa85f64-5717-4562-b3fc-2c963f66afa6: Timestamp=03/26/2026 20:26:56 +01:00, EngineRpm=10000, FuelLevelPercentage=100, Latitude=90.0, Longitude=180.0
@@ -71,6 +73,7 @@ info: VehicleTelemetry.Workers.CloudSend[0]
 ```
 
 4. **Run Unit Tests for Telemetry data**
+
 On Visual Studio menu click Test->Run All tests
 
 **Folder structure**
